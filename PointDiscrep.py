@@ -8,26 +8,26 @@ final_votes = spark.read \
     .format("csv") \
     .option("header", "true") \
     .option("inferSchema", "true") \
-    .load("dbfs:/FileStore/shared_uploads/jacob.haynes@monterosa.co/final_votes_2023_03_01_max.csv")
+    .load("dbfs:/FileStore/shared_uploads/jacob.haynes@xxxx.co/final_votes_2023_03_01_max.csv")
 #     .load("dbfs:/FileStore/shared_uploads/jacob.haynes@monterosa.co/final_votes_2023_03_01_min.csv")
 
 correct_answers = spark.read \
     .format("csv") \
     .option("header", "true") \
     .option("inferSchema", "true") \
-    .load("dbfs:/FileStore/shared_uploads/jacob.haynes@monterosa.co/filteredListWithPoints.csv")
+    .load("dbfs:/FileStore/shared_uploads/jacob.haynes@xxxx.co/filteredListWithPoints.csv")
 
 ct_leaderboard = spark.read \
     .format("csv") \
     .option("header", "true") \
     .option("inferSchema", "true") \
-    .load("dbfs:/FileStore/shared_uploads/jacob.haynes@monterosa.co/leaderboard__4_.csv")
+    .load("dbfs:/FileStore/shared_uploads/jacob.haynes@xxxx.co/leaderboard__4_.csv")
 
 overall_leaderboard = spark.read \
     .format("csv") \
     .option("header", "true") \
     .option("inferSchema", "true") \
-    .load("dbfs:/FileStore/shared_uploads/jacob.haynes@monterosa.co/overallleaderboard.csv")
+    .load("dbfs:/FileStore/shared_uploads/jacob.haynes@xxxx.co/overallleaderboard.csv")
 
 # COMMAND ----------
 
@@ -158,7 +158,7 @@ print(f"Minimum score difference: {score_diff_stats.min_score_diff}")
 
 # COMMAND ----------
 
-difference_table.write.format("csv").mode("overwrite").option("header", "true").option("delimiter", ",").option("encoding", "UTF-8").save("dbfs:/FileStore/formulae/difference_table.csv")
+difference_table.write.format("csv").mode("overwrite").option("header", "true").option("delimiter", ",").option("encoding", "UTF-8").save("dbfs:/FileStore/xxxx/difference_table.csv")
 
 # COMMAND ----------
 
